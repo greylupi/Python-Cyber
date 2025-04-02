@@ -14,6 +14,6 @@ args = parser.parse_args()
 host = sys.argv[1]
 
 
-response = requests.post(host, data={'key':"please"}
+response = requests.post(host, data={'key':"please"})
                          
 print(response.text)
