@@ -1,5 +1,6 @@
-#curl 'http://ptl-23deb8a2-468d8f2a.libcurl.so/pentesterlab?key=please%00'
+#curl "http://ptl-8eeef5d8-b9ae76ad.libcurl.so/pentesterlab?key\[please\]=1"
 
+import urllib
 import requests
 import sys
 import argparse
@@ -12,8 +13,7 @@ args = parser.parse_args()
 
 host = sys.argv[1]
 
-params = {'key':"please" + '\x00'}
-#data = {'key':"please"}
+params = {'key[please]': '1'}
 
 response = requests.get(host, params=params)
 
