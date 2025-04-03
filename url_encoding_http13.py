@@ -17,7 +17,7 @@ args = parser.parse_args()
 
 host = sys.argv[1]
 
-params = {'key':"please&"}
+params = {'key':"please" + '\x26'}
 #data = {'key':"please"}
 
 response = requests.post(host, params=params)

@@ -14,7 +14,7 @@ host = sys.argv[1]
 
 #when in python, dont need to url_encode
 
-params = {'key':"please#"}
+params = {'key':"please" + '\x23'}
 #data = {'key':"please"}
 
 response = requests.post(host, params=params)
